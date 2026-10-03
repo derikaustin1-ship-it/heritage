@@ -28,7 +28,7 @@ export default function Navbar() {
   return (
     <header style={{ position: 'sticky', top: 0, zIndex: 1000, backgroundColor: 'var(--color-ivory)' }}>
       {/* Top Info Bar */}
-      <div style={{ 
+      <div className="top-info-bar" style={{ 
         backgroundColor: 'var(--color-burgundy-dark)', 
         color: '#FAF8F2', 
         padding: '0.4rem 0', 
@@ -223,6 +223,11 @@ export default function Navbar() {
         }
         .nav-item:hover::after, .nav-item.active::after {
           width: 100%;
+        }
+        @media (max-width: 768px) {
+          .top-info-bar {
+            display: none !important;
+          }
         }
         @media (max-width: 1024px) {
           .desktop-nav {
